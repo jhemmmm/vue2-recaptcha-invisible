@@ -20,6 +20,13 @@ var component = {
 			vueRecaptchaInit: 0,
 		};
 	},
+	mounted: function mounted() {
+		var this$1 = this;
+
+		this.$nextTick(function () {
+			this$1.submitData();
+		});
+	},
 	created: function created() {
 		var this$1 = this;
 
@@ -72,9 +79,6 @@ var component = {
 			window.grecaptcha.reset(this.recaptchaId);
 			this.dataCallback(token);
 		},
-	},
-	mounted: function mounted() {
-		this.submitData();
 	},
 };
 

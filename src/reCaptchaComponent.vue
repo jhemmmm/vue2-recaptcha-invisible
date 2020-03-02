@@ -20,6 +20,11 @@ export default {
 			vueRecaptchaInit: 0,
 		};
 	},
+	mounted() {
+		this.$nextTick(() => {
+			this.submitData();
+		});
+	},
 	created() {
 		if (typeof window === 'undefined') return;
 		window.vueRecaptchaInit = () => {
@@ -70,9 +75,6 @@ export default {
 			window.grecaptcha.reset(this.recaptchaId);
 			this.dataCallback(token);
 		},
-	},
-	mounted() {
-		this.submitData();
 	},
 };
 </script>
