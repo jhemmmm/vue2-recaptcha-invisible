@@ -31,8 +31,6 @@ export default {
 		recaptchaScript.setAttribute('async', '');
 		recaptchaScript.setAttribute('defer', '');
 		(document.body || document.head).appendChild(recaptchaScript);
-
-		this.submitData();
 	},
 	watch: {
 		vueRecaptchaInit() {
