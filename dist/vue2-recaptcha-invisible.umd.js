@@ -26,13 +26,6 @@
 				vueRecaptchaInit: 0,
 			};
 		},
-		mounted: function mounted() {
-			var this$1 = this;
-
-			this.$nextTick(function () {
-				this$1.submitData();
-			});
-		},
 		created: function created() {
 			var this$1 = this;
 
@@ -46,6 +39,8 @@
 			recaptchaScript.setAttribute('async', '');
 			recaptchaScript.setAttribute('defer', '');
 			(document.body || document.head).appendChild(recaptchaScript);
+
+			this.submitData();
 		},
 		watch: {
 			vueRecaptchaInit: function vueRecaptchaInit() {

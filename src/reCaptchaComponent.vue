@@ -20,11 +20,6 @@ export default {
 			vueRecaptchaInit: 0,
 		};
 	},
-	mounted() {
-		this.$nextTick(() => {
-			this.submitData();
-		});
-	},
 	created() {
 		if (typeof window === 'undefined') return;
 		window.vueRecaptchaInit = () => {
@@ -36,6 +31,8 @@ export default {
 		recaptchaScript.setAttribute('async', '');
 		recaptchaScript.setAttribute('defer', '');
 		(document.body || document.head).appendChild(recaptchaScript);
+
+		this.submitData();
 	},
 	watch: {
 		vueRecaptchaInit() {
