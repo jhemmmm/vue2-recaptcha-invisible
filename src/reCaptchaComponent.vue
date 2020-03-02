@@ -1,3 +1,11 @@
+<template>
+	<div>
+		<div>
+			<button @click="submitData" :class="dataBtnClass" :disabled="dataBtnDisabled">ASD</button>
+		</div>
+	</div>
+</template>
+
 <script>
 /*
 global window document
@@ -12,6 +20,8 @@ export default {
 		dataErrorcallback: Function,
 		dataTabindex: String,
 		dataSize: String,
+		dataBtnClass: [String, Array, Object],
+		dataBtnDisabled: Boolean,
 		dataLanguage: String,
 	},
 	data() {

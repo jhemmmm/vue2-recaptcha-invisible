@@ -1,45 +1,45 @@
 {
-  "name": "@finpo/vue2-recaptcha-invisible",
-  "version": "1.2.0",
-  "description": "vue.js 2 component for google recaptcha invisible",
-  "keywords": [
-    "vue2",
-    "recaptcha",
-    "google recaptcha invisible",
-    "vue2-component"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/finpo/vue2-recaptcha-invisible.git"
-  },
-  "author": "ausir <ausir@finpo.com.tw>",
-  "bugs": {
-    "url": "https://github.com/finpo/vue2-recaptcha-invisible/issues"
-  },
-  "main": "dist/vue2-recaptcha-invisible.umd.js",
-  "module": "dist/vue2-recaptcha-invisible.esm.js",
-  "unpkg": "dist/vue2-recaptcha-invisible.min.js",
-  "browser": {
-    "./sfc": "src/reCaptchaComponent.vue"
-  },
-  "scripts": {
-    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue2-recaptcha-invisible.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue2-recaptcha-invisible.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue2-recaptcha-invisible.min.js"
-  },
-  "devDependencies": {
-    "minimist": "^1.2.0",
-    "rollup": "^0.57.1",
-    "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-uglify-es": "0.0.1",
-    "rollup-plugin-vue": "^3.0.0",
-    "vue": "^2.5.16",
-    "vue-template-compiler": "^2.5.16"
-  },
-  "browserify": {
-    "transform": [
-      "vueify"
-    ]
-  }
+   "name": "@finpo/vue2-recaptcha-invisible",
+   "version": "1.2.0",
+   "description": "vue.js 2 component for google recaptcha invisible",
+   "keywords": [
+      "vue2",
+      "recaptcha",
+      "google recaptcha invisible",
+      "vue2-component"
+   ],
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/finpo/vue2-recaptcha-invisible.git"
+   },
+   "author": "ausir <ausir@finpo.com.tw>",
+   "bugs": {
+      "url": "https://github.com/finpo/vue2-recaptcha-invisible/issues"
+   },
+   "main": "dist/vue2-recaptcha-invisible.umd.js",
+   "module": "dist/vue2-recaptcha-invisible.esm.js",
+   "unpkg": "dist/vue2-recaptcha-invisible.min.js",
+   "browser": {
+      "./sfc": "src/reCaptchaComponent.vue"
+   },
+   "scripts": {
+      "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+      "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue2-recaptcha-invisible.umd.js",
+      "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue2-recaptcha-invisible.esm.js",
+      "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue2-recaptcha-invisible.min.js"
+   },
+   "devDependencies": {
+      "minimist": "^1.2.0",
+      "rollup": "^0.57.1",
+      "rollup-plugin-buble": "^0.19.2",
+      "rollup-plugin-uglify-es": "0.0.1",
+      "rollup-plugin-vue": "^5.0.0",
+      "vue": "^2.5.16",
+      "vue-template-compiler": "^2.5.16"
+   },
+   "browserify": {
+      "transform": [
+         "vueify"
+      ]
+   }
 }
