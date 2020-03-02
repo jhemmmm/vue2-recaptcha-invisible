@@ -4,8 +4,6 @@
 //
 //
 //
-//
-//
 
 /*
 global window document
@@ -168,21 +166,16 @@ var __vue_render__ = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", [
-    _c("div", [
-      _c(
-        "button",
-        {
-          class: _vm.dataBtnClass,
-          attrs: { disabled: _vm.dataBtnDisabled },
-          on: { click: _vm.submitData }
-        },
-        [_vm._v("ASD")]
-      )
-    ])
-  ])
+  return _vm._m(0)
 };
-var __vue_staticRenderFns__ = [];
+var __vue_staticRenderFns__ = [
+  function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c("div", [_c("div")])
+  }
+];
 __vue_render__._withStripped = true;
 
   /* style */

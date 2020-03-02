@@ -1,8 +1,6 @@
 <template>
 	<div>
-		<div>
-			<button @click="submitData" :class="dataBtnClass" :disabled="dataBtnDisabled">ASD</button>
-		</div>
+		<div></div>
 	</div>
 </template>
 
