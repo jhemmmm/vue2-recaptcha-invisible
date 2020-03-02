@@ -12,7 +12,6 @@ export default {
 	props: {
 		dataSitekey: String,
 		dataCallback: Function,
-		dataValidate: Function,
 		dataBadge: String,
 		dataType: String,
 		dataErrorcallback: Function,
@@ -65,12 +64,10 @@ export default {
 	methods: {
 		submitData() {
 			if (typeof window === 'undefined') return;
-			if (this.dataValidate() === true || typeof this.dataValidate === 'undefined') {
-				if (typeof this.dataSize === 'undefined') {
-					window.grecaptcha.execute(this.recaptchaId);
-				} else {
-					this.getToken(window.grecaptcha.getResponse(this.recaptchaId));
-				}
+			if (typeof this.dataSize === 'undefined') {
+				window.grecaptcha.execute(this.recaptchaId);
+			} else {
+				this.getToken(window.grecaptcha.getResponse(this.recaptchaId));
 			}
 		},
 		getToken(token) {

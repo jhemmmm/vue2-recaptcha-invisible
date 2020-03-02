@@ -18,7 +18,6 @@
 		props: {
 			dataSitekey: String,
 			dataCallback: Function,
-			dataValidate: Function,
 			dataBadge: String,
 			dataType: String,
 			dataErrorcallback: Function,
@@ -73,12 +72,10 @@
 		methods: {
 			submitData: function submitData() {
 				if (typeof window === 'undefined') { return; }
-				if (this.dataValidate() === true || typeof this.dataValidate === 'undefined') {
-					if (typeof this.dataSize === 'undefined') {
-						window.grecaptcha.execute(this.recaptchaId);
-					} else {
-						this.getToken(window.grecaptcha.getResponse(this.recaptchaId));
-					}
+				if (typeof this.dataSize === 'undefined') {
+					window.grecaptcha.execute(this.recaptchaId);
+				} else {
+					this.getToken(window.grecaptcha.getResponse(this.recaptchaId));
 				}
 			},
 			getToken: function getToken(token) {
